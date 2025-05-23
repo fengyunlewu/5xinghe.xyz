@@ -1,0 +1,731 @@
+/* 
+ * I, President 官方网站样式表
+ * 作者: 开心可乐
+ * 日期: 2025
+ */
+
+/* 基础样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9fb;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #2166D1;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #1853a3;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.section-desc {
+    text-align: center;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    color: #666;
+}
+
+/* 按钮样式 */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #2166D1;
+    color: white;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #1853a3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    color: white;
+}
+
+.btn-primary {
+    background-color: #2166D1;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+}
+
+.btn-plan {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.btn-plan-primary {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #2166D1;
+    color: white;
+}
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+}
+
+/* 导航栏样式 */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #333;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-links a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #2166D1;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover:after {
+    width: 100%;
+}
+
+.download-btn-small {
+    display: none;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+/* 英雄区域样式 */
+.hero {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f1 100%);
+    overflow: hidden;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #1a1a2e;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    color: #5c5c6f;
+    margin-bottom: 40px;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.apple-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    background-image: url('../images/app_screenshots/apple-icon.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+/* 功能特色区域样式 */
+.features {
+    background-color: white;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.feature-card {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.feature-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* 应用截图轮播区域样式 */
+.app-screenshots {
+    background-color: #f0f2f5;
+    padding: 80px 0;
+}
+
+.screenshot-slider {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.screenshot-item {
+    min-width: 280px;
+    text-align: center;
+    padding: 10px;
+}
+
+.screenshot-item img {
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* 增强截图效果 */
+.screenshot-item:hover img {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.screenshot-item p {
+    font-size: 0.95rem;
+    color: #444;
+    font-weight: 500;
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.prev-btn, .next-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: #2166D1;
+    color: white;
+}
+
+/* 大臣团队区域样式 */
+.ministers {
+    background-color: white;
+}
+
+.minister-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.minister-card {
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.minister-card:hover {
+    transform: translateY(-10px);
+}
+
+.minister-avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.minister-title {
+    color: #2166D1;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.minister-desc {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* 订阅计划区域样式 */
+.subscription {
+    background-color: #f0f2f5;
+}
+
+.plan-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.plan-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 350px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+}
+
+.plan-card.featured {
+    border: 2px solid #2166D1;
+    padding-top: 60px;
+}
+
+.best-value {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #2166D1;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 8px 8px 0 0;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 5px;
+}
+
+.price span {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #666;
+}
+
+.saving {
+    color: #e74c3c;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.plan-features {
+    margin-bottom: 30px;
+}
+
+.plan-features li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 25px;
+}
+
+.plan-features li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #2166D1;
+    font-weight: bold;
+}
+
+.free-trial {
+    text-align: center;
+    color: #666;
+}
+
+.restore-link {
+    margin-top: 10px;
+    display: inline-block;
+    color: #2166D1;
+    text-decoration: underline;
+}
+
+/* 常见问题区域样式 */
+.faq {
+    background-color: white;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-question h3 {
+    margin-bottom: 0;
+}
+
+.toggle-icon {
+    font-size: 1.5rem;
+    color: #2166D1;
+}
+
+.faq-answer {
+    margin-top: 15px;
+    display: none;
+}
+
+.faq-answer.active {
+    display: block;
+}
+
+/* 联系我们区域样式 */
+.contact {
+    background-color: #f0f2f5;
+}
+
+.contact-methods {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.contact-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    flex: 1;
+    text-align: center;
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-link {
+    padding: 8px 15px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: #2166D1;
+    color: white;
+}
+
+/* 页脚样式 */
+footer {
+    background-color: #1a1a2e;
+    color: white;
+    padding: 80px 0 30px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.footer-logo {
+    flex: 1;
+}
+
+.footer-logo img {
+    height: 40px;
+    margin-bottom: 15px;
+}
+
+.footer-links {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-column h4 {
+    color: #2166D1;
+    margin-bottom: 20px;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #999;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .minister-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 60px 0;
+    }
+    
+    .hero {
+        padding-top: 120px;
+    }
+    
+    .hero .container {
+        flex-direction: column;
+    }
+    
+    .hero-content {
+        text-align: center;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .download-btn-small {
+        display: block;
+    }
+    
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .minister-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .plan-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-methods {
+        flex-direction: column;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .feature-card, .minister-card, .plan-card, .contact-card {
+        padding: 20px;
+    }
+    
+    .download-btn-small {
+        display: none;
+    }
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fadeIn {
+    animation: fadeIn 1s ease forwards;
+} 
