@@ -1,50 +1,30 @@
 #!/bin/bash
 
-# I, President 网站部署脚本
-# 作者：开心可乐
-# 日期：2025
+# 杭州星合新能源有限公司官网部署脚本
+# 用于将网站更改推送到GitHub Pages
 
-echo "========================================"
-echo "  I, President 官网部署脚本"
-echo "========================================"
-echo
+echo "🚀 开始部署杭州星合新能源有限公司官网..."
 
-# 检查Netlify CLI是否已安装
-if ! command -v netlify &> /dev/null; then
-    echo "未检测到Netlify CLI。正在安装..."
-    npm install -g netlify-cli
-    echo "Netlify CLI 已安装。"
-fi
-
-# 优化图片资源
-echo "正在检查图片资源..."
-if ! command -v imageoptim &> /dev/null; then
-    echo "提示：安装 ImageOptim CLI 可以优化图片 (https://imageoptim.com/command-line.html)"
-    echo "跳过图片优化步骤。"
+# 检查是否有未提交的更改
+if [ -n "$(git status --porcelain)" ]; then
+    echo "📝 发现未提交的更改，正在提交..."
+    git add .
+    read -p "请输入提交信息: " commit_message
+    git commit -m "$commit_message"
 else
-    echo "正在优化图片..."
-    imageoptim ./images/*
-    echo "图片优化完成。"
+    echo "✅ 工作目录干净，没有未提交的更改"
 fi
 
-# 验证HTML
-echo "正在验证HTML文件..."
-if command -v html5validator &> /dev/null; then
-    html5validator --root .
+# 推送到GitHub
+echo "📤 推送更改到GitHub..."
+if git push origin main; then
+    echo "✅ 成功推送到GitHub!"
+    echo "🌐 网站将在几分钟内更新："
+    echo "   主域名: https://5xinghe.xyz"
+    echo "   备用域名: https://fengyunlewu.github.io/5xinghe.xyz"
 else
-    echo "提示：安装 html5validator 可以验证HTML文件 (pip install html5validator)"
-    echo "跳过HTML验证步骤。"
+    echo "❌ 推送失败，请检查网络连接或GitHub访问权限"
+    echo "💡 您可以稍后手动运行: git push origin main"
 fi
 
-# 构建步骤（这里可以添加如压缩CSS、JS等步骤）
-echo "正在准备部署..."
-
-# 部署到Netlify
-echo "正在部署到Netlify..."
-netlify deploy --prod
-
-echo
-echo "========================================"
-echo "  部署流程已完成"
-echo "  访问 https://5xinghe.xyz 查看您的网站"
-echo "========================================" 
+echo "🎉 部署脚本执行完成!" 
