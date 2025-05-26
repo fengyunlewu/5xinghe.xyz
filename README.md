@@ -129,3 +129,5 @@ I,President-Website/
 ## 版权
 
 © 2025 I, President. 保留所有权利。 
+
+<link rel="apple-touch-icon" sizes="180x180" href="images/app-icons/icon-180x180.png"> 
