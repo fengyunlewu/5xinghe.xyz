@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I, President - 模拟总统决策游戏</title>
+    <meta name="description" content="成为一国总统，与历史上最具智慧的大臣团队合作，制定政策，解决问题，管理你的模拟王国。">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/app-icons/icon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/app-icons/icon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    
+    <!-- Apple Touch Icons - iOS设备专用 -->
+    <link rel="apple-touch-icon" href="images/app-icons/icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="images/app-icons/icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/app-icons/icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/app-icons/icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/app-icons/icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/app-icons/icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/app-icons/icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="images/app-icons/icon-128x128.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/app-icons/icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/app-icons/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/app-icons/icon-180x180.png">
+    
+    <!-- Android Chrome Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="images/app-icons/icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/app-icons/icon-512x512.png">
+    
+    <!-- 移动端Web应用配置 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="I, President">
+    <meta name="apple-touch-fullscreen" content="yes">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Theme Color for Mobile Browsers -->
+    <meta name="theme-color" content="#4285f4">
+    <meta name="msapplication-TileColor" content="#4285f4">
+    <meta name="msapplication-TileImage" content="images/app-icons/icon-192x192.png">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="images/app_screenshots/logo.jpg" alt="I, President Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">功能特色</a></li>
+                <li><a href="#ministers">智慧大臣</a></li>
+                <li><a href="#subscription">订阅计划</a></li>
+                <li><a href="#faq">常见问题</a></li>
+                <li><a href="#contact">联系我们</a></li>
+                <li><a href="privacy.html">隐私政策</a></li>
+            </ul>
+            <div class="download-btn-small">
+                <a href="https://apps.apple.com/app/i-president/id0000000000" class="btn">立即下载</a>
+            </div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>你的国度，你的决策</h1>
+                <p>扮演一国总统，与马斯克、魏征、巴菲特、袁天罡等智慧大臣共同协商，制定政策，解决危机，塑造你的传奇</p>
+                <div class="download-btn">
+                    <a href="https://apps.apple.com/app/i-president/id0000000000" class="btn btn-primary">
+                        <span class="apple-icon"></span>App Store 下载
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/app_screenshots/hero-app.jpg" alt="I, President App 界面展示">
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>主要功能</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="images/feature-icons/icon-ministers.jpg" alt="智慧大臣">
+                    </div>
+                    <h3>你的大臣</h3>
+                    <p>与历史上最具智慧的大臣团队合作，包括埃隆·马斯克（创新）、魏征（政治）、巴菲特（财富）、袁天罡（预测）等顶级智囊。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="images/feature-icons/icon-roundtable.jpg" alt="圆桌会议">
+                    </div>
+                    <h3>大臣圆桌会议</h3>
+                    <p>召集四位风格迥异的智慧大臣，向他们咨询关键问题，获取多角度的专业建议，体验思想碰撞。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="images/feature-icons/icon-badges.jpg" alt="徽章与成就">
+                    </div>
+                    <h3>徽章与成就系统</h3>
+                    <p>解锁独特的历史领袖徽章，彰显你的治国风格，完成具有挑战性的政策目标，获取荣誉徽章。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="images/feature-icons/icon-goals.jpg" alt="目标管理">
+                    </div>
+                    <h3>个人目标管理</h3>
+                    <p>设定个人和国家发展目标，获取大臣们的专业建议，优化目标达成路径，提升个人能力。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="app-screenshots">
+        <div class="container">
+            <h2>应用界面展示</h2>
+            <div class="screenshot-slider">
+                <div class="screenshot-item">
+                    <img src="images/app_screenshots/screen-home.jpg" alt="总统府界面">
+                    <p>总统府 - 你的虚拟王国指挥中心</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/app_screenshots/screen-minister.jpg" alt="内阁界面">
+                    <p>内阁 - 与智慧大臣交流互动</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/app_screenshots/screen-roundtable.jpg" alt="圆桌会议界面">
+                    <p>大臣圆桌会议 - 集思广益解决问题</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/app_screenshots/screen-goals.jpg" alt="目标管理界面">
+                    <p>目标管理 - 设定并追踪个人与国家目标</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/app_screenshots/screen-badges.jpg" alt="徽章与成就界面">
+                    <p>徽章与成就 - 展示您的治国风格与荣誉</p>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="prev-btn">&#10094;</button>
+                <button class="next-btn">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="ministers" class="ministers">
+        <div class="container">
+            <h2>智慧大臣团队</h2>
+            <div class="minister-grid">
+                <div class="minister-card">
+                    <div class="minister-avatar">
+                        <img src="images/ministers/minister-musk.jpg" alt="埃隆·马斯克">
+                    </div>
+                    <h3>埃隆·马斯克</h3>
+                    <p class="minister-title">创新与技术大臣</p>
+                    <p class="minister-desc">革命性思想家，为你提供前沿科技和创新策略建议，推动国家快速发展。</p>
+                </div>
+                <div class="minister-card">
+                    <div class="minister-avatar">
+                        <img src="images/ministers/minister-weizhen.jpg" alt="魏征">
+                    </div>
+                    <h3>魏征</h3>
+                    <p class="minister-title">政治与心理大臣</p>
+                    <p class="minister-desc">直言不讳的谏臣，提供诚实而深刻的政治建议，帮助你避免权力陷阱。</p>
+                </div>
+                <div class="minister-card">
+                    <div class="minister-avatar">
+                        <img src="images/ministers/minister-buffett.jpg" alt="巴菲特">
+                    </div>
+                    <h3>巴菲特</h3>
+                    <p class="minister-title">财富与经济大臣</p>
+                    <p class="minister-desc">投资大师，为国家经济政策和财政决策提供长远眼光和稳健策略。</p>
+                </div>
+                <div class="minister-card">
+                    <div class="minister-avatar">
+                        <img src="images/ministers/minister-yuan.jpg" alt="袁天罡">
+                    </div>
+                    <h3>袁天罡</h3>
+                    <p class="minister-title">预测与占卜大臣</p>
+                    <p class="minister-desc">洞察力超群的预言家，帮助你预判政策影响和潜在风险，未雨绸缪。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="subscription" class="subscription">
+        <div class="container">
+            <h2>订阅计划</h2>
+            <p class="section-desc">解锁全部功能，享受无限的总统决策体验</p>
+            <div class="plan-cards">
+                <div class="plan-card">
+                    <h3>月度至尊会员</h3>
+                    <div class="price">¥29<span>/月</span></div>
+                    <ul class="plan-features">
+                        <li>访问所有智慧大臣</li>
+                        <li>无限圆桌会议</li>
+                        <li>全部徽章解锁机会</li>
+                        <li>高级目标管理系统</li>
+                        <li>无广告体验</li>
+                    </ul>
+                    <a href="https://apps.apple.com/app/i-president/id0000000000" class="btn btn-plan">立即订阅</a>
+                </div>
+                <div class="plan-card featured">
+                    <div class="best-value">最佳选择</div>
+                    <h3>年度至尊会员</h3>
+                    <div class="price">¥199<span>/年</span></div>
+                    <div class="saving">相比月付节省¥149</div>
+                    <ul class="plan-features">
+                        <li>访问所有智慧大臣</li>
+                        <li>无限圆桌会议</li>
+                        <li>全部徽章解锁机会</li>
+                        <li>高级目标管理系统</li>
+                        <li>无广告体验</li>
+                        <li>年度专属徽章</li>
+                    </ul>
+                    <a href="https://apps.apple.com/app/i-president/id0000000000" class="btn btn-plan-primary">立即订阅</a>
+                </div>
+            </div>
+            <div class="free-trial">
+                <p>新用户可享受7天免费试用，随时取消</p>
+                <a href="#" class="restore-link">恢复已购买的订阅</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>常见问题</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>应用需要联网使用吗？</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>是的，I, President 需要网络连接才能访问完整功能。这是因为大臣建议和圆桌会议等核心功能需要在线服务支持。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>我可以在多台设备上使用同一个订阅吗？</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>可以，只要这些设备使用同一个 Apple ID，您的订阅将自动在这些设备上同步。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>大臣们的建议是如何生成的？</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>大臣建议基于先进的人工智能技术，根据每位历史人物的性格特点、专业领域和思维方式生成，确保建议符合其历史形象和专业领域。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>如何取消订阅？</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>您可以在 iPhone 的"设置"中，点击您的 Apple ID，然后选择"订阅"，找到 I, President 并取消订阅。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>未来会增加更多大臣吗？</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>是的，我们计划定期更新游戏，增加更多来自不同历史时期和专业领域的大臣角色，丰富您的决策体验。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>联系我们</h2>
+            <p class="section-desc">有任何问题、建议或合作意向，欢迎随时联系我们</p>
+            <div class="contact-methods">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <img src="images/icons/icon-email.png" alt="电子邮件">
+                    </div>
+                    <h3>电子邮件</h3>
+                    <p>support@5xinghe.xyz</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <img src="images/icons/icon-support.png" alt="技术支持">
+                    </div>
+                    <h3>技术支持</h3>
+                    <p>帮助中心提供详细指南和常见问题解答</p>
+                    <a href="#" class="btn btn-small">访问帮助中心</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <img src="images/icons/icon-social.png" alt="社交媒体">
+                    </div>
+                    <h3>社交媒体</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link">微博</a>
+                        <a href="#" class="social-link">微信公众号</a>
+                        <a href="#" class="social-link">知乎</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/app_screenshots/logo-white.jpg" alt="I, President Logo">
+                    <p>模拟总统决策，掌控你的虚拟国度</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>产品</h4>
+                        <ul>
+                            <li><a href="#features">功能特色</a></li>
+                            <li><a href="#ministers">智慧大臣</a></li>
+                            <li><a href="#subscription">订阅计划</a></li>
+                            <li><a href="#faq">常见问题</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>公司</h4>
+                        <ul>
+                            <li><a href="#">关于我们</a></li>
+                            <li><a href="privacy.html">隐私政策</a></li>
+                            <li><a href="#">使用条款</a></li>
+                            <li><a href="#">退款政策</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>支持</h4>
+                        <ul>
+                            <li><a href="#contact">联系我们</a></li>
+                            <li><a href="#">帮助中心</a></li>
+                            <li><a href="#">常见问题</a></li>
+                            <li><a href="#">反馈建议</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 I, President. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

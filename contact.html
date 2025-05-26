@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 | 杭州星合新能源有限公司</title>
+    <meta name="description" content="联系杭州星合新能源有限公司，获取产品支持、商务合作或技术咨询。我们期待与您的交流。">
+    <meta name="keywords" content="杭州星合新能源,联系我们,客户服务,商务合作,技术支持">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/app-icons/icon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/app-icons/icon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="images/app-icons/icon-180x180.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Theme Color for Mobile Browsers -->
+    <meta name="theme-color" content="#667eea">
+    
+    <style>
+        .contact-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 120px 0 80px;
+            color: white;
+            text-align: center;
+        }
+        
+        .contact-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .contact-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .contact-content {
+            padding: 100px 0;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .contact-info {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .info-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-method:hover {
+            transform: translateY(-3px);
+        }
+        
+        .method-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            flex-shrink: 0;
+        }
+        
+        .method-content {
+            flex: 1;
+        }
+        
+        .method-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .method-description {
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+        
+        .method-value {
+            font-weight: 600;
+            color: #667eea;
+        }
+        
+        .contact-form {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .form-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-label {
+            display: block;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            box-sizing: border-box;
+        }
+        
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .form-submit {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            width: 100%;
+        }
+        
+        .form-submit:hover {
+            transform: translateY(-2px);
+        }
+        
+        .business-section {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+        
+        .business-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .business-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .business-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .business-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .business-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .business-description {
+            color: #7f8c8d;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .business-contact {
+            font-weight: 600;
+            color: #667eea;
+        }
+        
+        .faq-section {
+            padding: 80px 0;
+        }
+        
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f8f9fa;
+            transition: background-color 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: #e9ecef;
+        }
+        
+        .faq-question h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 0;
+        }
+        
+        .faq-toggle {
+            font-size: 1.5rem;
+            color: #667eea;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-answer {
+            padding: 0 25px 25px;
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-title {
+                font-size: 2.5rem;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .contact-info,
+            .contact-form {
+                padding: 30px 20px;
+            }
+            
+            .business-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-method {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/app-icons/icon-60x60.png" alt="杭州星合新能源" class="logo-icon">
+                <span class="logo-text">杭州星合新能源</span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">首页</a>
+                <a href="about.html" class="nav-link">关于我们</a>
+                <a href="contact.html" class="nav-link active">联系我们</a>
+                <a href="privacy.html" class="nav-link">隐私政策</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero区域 -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1 class="contact-title">联系我们</h1>
+            <p class="contact-subtitle">我们期待与您的交流，无论是产品咨询、技术支持还是商务合作，都欢迎随时联系我们</p>
+        </div>
+    </section>
+
+    <!-- 联系方式和表单 -->
+    <section class="contact-content">
+        <div class="contact-grid">
+            <!-- 联系信息 -->
+            <div class="contact-info">
+                <h2 class="info-title">联系方式</h2>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="method-icon">📧</div>
+                        <div class="method-content">
+                            <h3 class="method-title">电子邮件</h3>
+                            <p class="method-description">我们会在24小时内回复您的邮件</p>
+                            <p class="method-value">contact@5xinghe.xyz</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="method-icon">🌐</div>
+                        <div class="method-content">
+                            <h3 class="method-title">官方网站</h3>
+                            <p class="method-description">访问我们的官方网站了解更多信息</p>
+                            <p class="method-value">5xinghe.xyz</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="method-icon">📍</div>
+                        <div class="method-content">
+                            <h3 class="method-title">公司地址</h3>
+                            <p class="method-description">欢迎预约到访我们的办公室</p>
+                            <p class="method-value">杭州市</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="method-icon">⏰</div>
+                        <div class="method-content">
+                            <h3 class="method-title">工作时间</h3>
+                            <p class="method-description">我们的客服工作时间</p>
+                            <p class="method-value">周一至周五 9:00-18:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 联系表单 -->
+            <div class="contact-form">
+                <h2 class="form-title">发送消息</h2>
+                <form onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label for="name" class="form-label">姓名 *</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">邮箱地址 *</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject" class="form-label">咨询类型 *</label>
+                        <select id="subject" name="subject" class="form-select" required>
+                            <option value="">请选择咨询类型</option>
+                            <option value="product">产品咨询</option>
+                            <option value="support">技术支持</option>
+                            <option value="business">商务合作</option>
+                            <option value="feedback">意见反馈</option>
+                            <option value="other">其他</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">详细描述 *</label>
+                        <textarea id="message" name="message" class="form-textarea" placeholder="请详细描述您的问题或需求..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="form-submit">发送消息</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 商务合作 -->
+    <section class="business-section">
+        <div class="container">
+            <h2 class="section-title">商务合作</h2>
+            <div class="business-cards">
+                <div class="business-card">
+                    <div class="business-icon">🤝</div>
+                    <h3 class="business-title">战略合作</h3>
+                    <p class="business-description">寻求长期战略合作伙伴，共同开拓游戏化应用市场，实现互利共赢。</p>
+                    <p class="business-contact">business@5xinghe.xyz</p>
+                </div>
+                
+                <div class="business-card">
+                    <div class="business-icon">💼</div>
+                    <h3 class="business-title">技术合作</h3>
+                    <p class="business-description">与技术公司合作，共同研发创新的游戏化解决方案和AI技术应用。</p>
+                    <p class="business-contact">tech@5xinghe.xyz</p>
+                </div>
+                
+                <div class="business-card">
+                    <div class="business-icon">📱</div>
+                    <h3 class="business-title">渠道合作</h3>
+                    <p class="business-description">与应用商店、分发平台等渠道合作，扩大产品覆盖面和用户群体。</p>
+                    <p class="business-contact">channel@5xinghe.xyz</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见问题 -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">常见问题</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>如何获取产品技术支持？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer" style="display: none;">
+                        <p>您可以通过邮件 contact@5xinghe.xyz 联系我们的技术支持团队，我们会在24小时内回复您的问题。对于紧急技术问题，我们也提供优先处理服务。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>是否提供定制开发服务？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer" style="display: none;">
+                        <p>是的，我们提供定制化的游戏化应用开发服务。请通过商务合作邮箱 business@5xinghe.xyz 联系我们，详细说明您的需求，我们会为您提供专业的解决方案。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>如何成为我们的合作伙伴？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer" style="display: none;">
+                        <p>我们欢迎各种形式的合作。请发送您的合作提案到 business@5xinghe.xyz，包括您的公司介绍、合作意向和预期目标。我们会认真评估每一个合作机会。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>产品更新频率如何？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer" style="display: none;">
+                        <p>我们致力于持续改进产品体验，通常每月会发布功能更新和优化。重大功能更新会提前通知用户，确保您能及时了解新功能和改进。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>杭州星合新能源有限公司</h3>
+                    <p>游戏化改变你的生活方式</p>
+                </div>
+                <div class="footer-section">
+                    <h4>产品中心</h4>
+                    <ul>
+                        <li><a href="i-president.html">I, President</a></li>
+                        <li><a href="meet.html">Meet</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>公司信息</h4>
+                    <ul>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="contact.html">联系我们</a></li>
+                        <li><a href="privacy.html">隐私政策</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>邮箱：contact@5xinghe.xyz</li>
+                        <li>网站：5xinghe.xyz</li>
+                        <li>地址：杭州市</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 杭州星合新能源有限公司. 保留所有权利. | <span id="icp-number">ICP备案号：待备案</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            // 获取表单数据
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            // 这里可以添加实际的表单提交逻辑
+            alert('感谢您的留言！我们会尽快回复您。');
+            event.target.reset();
+        }
+        
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const toggle = element.querySelector('.faq-toggle');
+            
+            if (answer.style.display === 'none' || answer.style.display === '') {
+                answer.style.display = 'block';
+                toggle.textContent = '-';
+            } else {
+                answer.style.display = 'none';
+                toggle.textContent = '+';
+            }
+        }
+    </script>
+</body>
+</html> 

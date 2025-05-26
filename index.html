@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I, President - 模拟总统决策游戏</title>
-    <meta name="description" content="成为一国总统，与历史上最具智慧的大臣团队合作，制定政策，解决问题，管理你的模拟王国。">
+    <title>杭州星合新能源有限公司 - 游戏化改变你的生活方式</title>
+    <meta name="description" content="杭州星合新能源有限公司致力于通过创新的游戏化应用，让科技融入生活，提升用户体验。主要产品包括I, President模拟总统决策游戏和Meet社交应用。">
+    <meta name="keywords" content="杭州星合新能源,游戏化应用,I President,Meet,移动应用开发,科技创新">
     <link rel="stylesheet" href="css/style.css">
     
     <!-- Favicon -->
@@ -12,354 +13,402 @@
     <link rel="icon" type="image/png" sizes="16x16" href="images/app-icons/icon-16x16.png">
     <link rel="shortcut icon" href="favicon.ico">
     
-    <!-- Apple Touch Icons - iOS设备专用 -->
+    <!-- Apple Touch Icons -->
     <link rel="apple-touch-icon" href="images/app-icons/icon-180x180.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="images/app-icons/icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="images/app-icons/icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/app-icons/icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="images/app-icons/icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/app-icons/icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="images/app-icons/icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="128x128" href="images/app-icons/icon-128x128.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/app-icons/icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="images/app-icons/icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/app-icons/icon-180x180.png">
-    
-    <!-- Android Chrome Icons -->
-    <link rel="icon" type="image/png" sizes="192x192" href="images/app-icons/icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="images/app-icons/icon-512x512.png">
-    
-    <!-- 移动端Web应用配置 -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="I, President">
-    <meta name="apple-touch-fullscreen" content="yes">
     
     <!-- Web App Manifest -->
     <link rel="manifest" href="manifest.json">
     
     <!-- Theme Color for Mobile Browsers -->
-    <meta name="theme-color" content="#4285f4">
-    <meta name="msapplication-TileColor" content="#4285f4">
-    <meta name="msapplication-TileImage" content="images/app-icons/icon-192x192.png">
+    <meta name="theme-color" content="#667eea">
+    
+    <style>
+        /* 企业官网专用样式 */
+        .company-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .company-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="200" r="100" fill="url(%23a)"/><circle cx="800" cy="300" r="150" fill="url(%23a)"/><circle cx="400" cy="700" r="120" fill="url(%23a)"/></svg>') no-repeat center center;
+            background-size: cover;
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .company-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .company-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        .core-philosophy {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .products-section {
+            padding: 100px 0;
+            background: #f8f9fa;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 60px;
+            font-weight: 700;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .product-card.coming-soon {
+            opacity: 0.7;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        .product-card.coming-soon:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .product-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .product-name {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .product-description {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .product-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #667eea;
+            padding: 12px 30px;
+            border: 2px solid #667eea;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        .btn-disabled {
+            background: #6c757d;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+        
+        .coming-soon-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #ffc107 0%, #ff8c00 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .company-info {
+            background: white;
+            padding: 80px 0;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .info-card {
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .info-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .info-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .info-description {
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .company-title {
+                font-size: 2.5rem;
+            }
+            
+            .core-philosophy {
+                font-size: 1.5rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .product-card {
+                padding: 30px 20px;
+            }
+            
+            .product-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <div class="logo">
-                <img src="images/app_screenshots/logo.jpg" alt="I, President Logo">
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/app-icons/icon-60x60.png" alt="杭州星合新能源" class="logo-icon">
+                <span class="logo-text">杭州星合新能源</span>
             </div>
-            <ul class="nav-links">
-                <li><a href="#features">功能特色</a></li>
-                <li><a href="#ministers">智慧大臣</a></li>
-                <li><a href="#subscription">订阅计划</a></li>
-                <li><a href="#faq">常见问题</a></li>
-                <li><a href="#contact">联系我们</a></li>
-                <li><a href="privacy.html">隐私政策</a></li>
-            </ul>
-            <div class="download-btn-small">
-                <a href="https://apps.apple.com/app/i-president/id0000000000" class="btn">立即下载</a>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link active">首页</a>
+                <a href="about.html" class="nav-link">关于我们</a>
+                <a href="contact.html" class="nav-link">联系我们</a>
+                <a href="privacy.html" class="nav-link">隐私政策</a>
             </div>
-            <div class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>你的国度，你的决策</h1>
-                <p>扮演一国总统，与马斯克、魏征、巴菲特、袁天罡等智慧大臣共同协商，制定政策，解决危机，塑造你的传奇</p>
-                <div class="download-btn">
-                    <a href="https://apps.apple.com/app/i-president/id0000000000" class="btn btn-primary">
-                        <span class="apple-icon"></span>App Store 下载
-                    </a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="images/app_screenshots/hero-app.jpg" alt="I, President App 界面展示">
+    <!-- 企业Hero区域 -->
+    <section class="company-hero">
+        <div class="hero-content">
+            <h1 class="company-title">杭州星合新能源有限公司</h1>
+            <p class="company-subtitle">致力于通过创新的游戏化应用，让科技融入生活，提升用户体验</p>
+            <div class="core-philosophy">
+                🎮 游戏化改变你的生活方式
             </div>
         </div>
     </section>
 
-    <section id="features" class="features">
+    <!-- 产品展示区域 -->
+    <section class="products-section">
         <div class="container">
-            <h2>主要功能</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <img src="images/feature-icons/icon-ministers.jpg" alt="智慧大臣">
+            <h2 class="section-title">我们的产品</h2>
+            <div class="products-grid">
+                <!-- I, President 产品卡片 -->
+                <div class="product-card">
+                    <div class="product-icon">
+                        <img src="images/app-icons/icon-180x180.png" alt="I, President">
                     </div>
-                    <h3>你的大臣</h3>
-                    <p>与历史上最具智慧的大臣团队合作，包括埃隆·马斯克（创新）、魏征（政治）、巴菲特（财富）、袁天罡（预测）等顶级智囊。</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <img src="images/feature-icons/icon-roundtable.jpg" alt="圆桌会议">
+                    <h3 class="product-name">I, President</h3>
+                    <p class="product-description">模拟总统决策，体验领导智慧。与历史上最具智慧的大臣团队合作，制定政策，解决问题，管理你的虚拟王国。</p>
+                    <div class="product-buttons">
+                        <a href="i-president.html" class="btn-secondary">了解更多</a>
+                        <a href="https://apps.apple.com/app/i-president/id0000000000" class="btn-primary">立即下载</a>
                     </div>
-                    <h3>大臣圆桌会议</h3>
-                    <p>召集四位风格迥异的智慧大臣，向他们咨询关键问题，获取多角度的专业建议，体验思想碰撞。</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <img src="images/feature-icons/icon-badges.jpg" alt="徽章与成就">
-                    </div>
-                    <h3>徽章与成就系统</h3>
-                    <p>解锁独特的历史领袖徽章，彰显你的治国风格，完成具有挑战性的政策目标，获取荣誉徽章。</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <img src="images/feature-icons/icon-goals.jpg" alt="目标管理">
-                    </div>
-                    <h3>个人目标管理</h3>
-                    <p>设定个人和国家发展目标，获取大臣们的专业建议，优化目标达成路径，提升个人能力。</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="app-screenshots">
-        <div class="container">
-            <h2>应用界面展示</h2>
-            <div class="screenshot-slider">
-                <div class="screenshot-item">
-                    <img src="images/app_screenshots/screen-home.jpg" alt="总统府界面">
-                    <p>总统府 - 你的虚拟王国指挥中心</p>
-                </div>
-                <div class="screenshot-item">
-                    <img src="images/app_screenshots/screen-minister.jpg" alt="内阁界面">
-                    <p>内阁 - 与智慧大臣交流互动</p>
-                </div>
-                <div class="screenshot-item">
-                    <img src="images/app_screenshots/screen-roundtable.jpg" alt="圆桌会议界面">
-                    <p>大臣圆桌会议 - 集思广益解决问题</p>
-                </div>
-                <div class="screenshot-item">
-                    <img src="images/app_screenshots/screen-goals.jpg" alt="目标管理界面">
-                    <p>目标管理 - 设定并追踪个人与国家目标</p>
-                </div>
-                <div class="screenshot-item">
-                    <img src="images/app_screenshots/screen-badges.jpg" alt="徽章与成就界面">
-                    <p>徽章与成就 - 展示您的治国风格与荣誉</p>
-                </div>
-            </div>
-            <div class="slider-controls">
-                <button class="prev-btn">&#10094;</button>
-                <button class="next-btn">&#10095;</button>
-            </div>
-        </div>
-    </section>
-
-    <section id="ministers" class="ministers">
-        <div class="container">
-            <h2>智慧大臣团队</h2>
-            <div class="minister-grid">
-                <div class="minister-card">
-                    <div class="minister-avatar">
-                        <img src="images/ministers/minister-musk.jpg" alt="埃隆·马斯克">
+                <!-- Meet 产品卡片 -->
+                <div class="product-card coming-soon">
+                    <div class="coming-soon-badge">即将推出</div>
+                    <div class="product-icon">
+                        <img src="images/app-icons/icon-180x180.png" alt="Meet">
                     </div>
-                    <h3>埃隆·马斯克</h3>
-                    <p class="minister-title">创新与技术大臣</p>
-                    <p class="minister-desc">革命性思想家，为你提供前沿科技和创新策略建议，推动国家快速发展。</p>
-                </div>
-                <div class="minister-card">
-                    <div class="minister-avatar">
-                        <img src="images/ministers/minister-weizhen.jpg" alt="魏征">
-                    </div>
-                    <h3>魏征</h3>
-                    <p class="minister-title">政治与心理大臣</p>
-                    <p class="minister-desc">直言不讳的谏臣，提供诚实而深刻的政治建议，帮助你避免权力陷阱。</p>
-                </div>
-                <div class="minister-card">
-                    <div class="minister-avatar">
-                        <img src="images/ministers/minister-buffett.jpg" alt="巴菲特">
-                    </div>
-                    <h3>巴菲特</h3>
-                    <p class="minister-title">财富与经济大臣</p>
-                    <p class="minister-desc">投资大师，为国家经济政策和财政决策提供长远眼光和稳健策略。</p>
-                </div>
-                <div class="minister-card">
-                    <div class="minister-avatar">
-                        <img src="images/ministers/minister-yuan.jpg" alt="袁天罡">
-                    </div>
-                    <h3>袁天罡</h3>
-                    <p class="minister-title">预测与占卜大臣</p>
-                    <p class="minister-desc">洞察力超群的预言家，帮助你预判政策影响和潜在风险，未雨绸缪。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="subscription" class="subscription">
-        <div class="container">
-            <h2>订阅计划</h2>
-            <p class="section-desc">解锁全部功能，享受无限的总统决策体验</p>
-            <div class="plan-cards">
-                <div class="plan-card">
-                    <h3>月度至尊会员</h3>
-                    <div class="price">¥29<span>/月</span></div>
-                    <ul class="plan-features">
-                        <li>访问所有智慧大臣</li>
-                        <li>无限圆桌会议</li>
-                        <li>全部徽章解锁机会</li>
-                        <li>高级目标管理系统</li>
-                        <li>无广告体验</li>
-                    </ul>
-                    <a href="https://apps.apple.com/app/i-president/id0000000000" class="btn btn-plan">立即订阅</a>
-                </div>
-                <div class="plan-card featured">
-                    <div class="best-value">最佳选择</div>
-                    <h3>年度至尊会员</h3>
-                    <div class="price">¥199<span>/年</span></div>
-                    <div class="saving">相比月付节省¥149</div>
-                    <ul class="plan-features">
-                        <li>访问所有智慧大臣</li>
-                        <li>无限圆桌会议</li>
-                        <li>全部徽章解锁机会</li>
-                        <li>高级目标管理系统</li>
-                        <li>无广告体验</li>
-                        <li>年度专属徽章</li>
-                    </ul>
-                    <a href="https://apps.apple.com/app/i-president/id0000000000" class="btn btn-plan-primary">立即订阅</a>
-                </div>
-            </div>
-            <div class="free-trial">
-                <p>新用户可享受7天免费试用，随时取消</p>
-                <a href="#" class="restore-link">恢复已购买的订阅</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="faq" class="faq">
-        <div class="container">
-            <h2>常见问题</h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>应用需要联网使用吗？</h3>
-                        <span class="toggle-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>是的，I, President 需要网络连接才能访问完整功能。这是因为大臣建议和圆桌会议等核心功能需要在线服务支持。</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>我可以在多台设备上使用同一个订阅吗？</h3>
-                        <span class="toggle-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>可以，只要这些设备使用同一个 Apple ID，您的订阅将自动在这些设备上同步。</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>大臣们的建议是如何生成的？</h3>
-                        <span class="toggle-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>大臣建议基于先进的人工智能技术，根据每位历史人物的性格特点、专业领域和思维方式生成，确保建议符合其历史形象和专业领域。</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>如何取消订阅？</h3>
-                        <span class="toggle-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>您可以在 iPhone 的"设置"中，点击您的 Apple ID，然后选择"订阅"，找到 I, President 并取消订阅。</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>未来会增加更多大臣吗？</h3>
-                        <span class="toggle-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>是的，我们计划定期更新游戏，增加更多来自不同历史时期和专业领域的大臣角色，丰富您的决策体验。</p>
+                    <h3 class="product-name">Meet</h3>
+                    <p class="product-description">创新的社交应用，重新定义人与人之间的连接方式。敬请期待这款革命性的社交体验。</p>
+                    <div class="product-buttons">
+                        <a href="meet.html" class="btn-secondary">了解更多</a>
+                        <span class="btn-disabled">敬请期待</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact">
+    <!-- 公司信息区域 -->
+    <section class="company-info">
         <div class="container">
-            <h2>联系我们</h2>
-            <p class="section-desc">有任何问题、建议或合作意向，欢迎随时联系我们</p>
-            <div class="contact-methods">
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <img src="images/icons/icon-email.png" alt="电子邮件">
-                    </div>
-                    <h3>电子邮件</h3>
-                    <p>support@5xinghe.xyz</p>
+            <h2 class="section-title">为什么选择我们</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">🎯</div>
+                    <h3 class="info-title">创新理念</h3>
+                    <p class="info-description">我们相信游戏化能够改变生活方式，通过有趣的交互设计让用户获得更好的体验。</p>
                 </div>
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <img src="images/icons/icon-support.png" alt="技术支持">
-                    </div>
-                    <h3>技术支持</h3>
-                    <p>帮助中心提供详细指南和常见问题解答</p>
-                    <a href="#" class="btn btn-small">访问帮助中心</a>
+                <div class="info-card">
+                    <div class="info-icon">🚀</div>
+                    <h3 class="info-title">技术驱动</h3>
+                    <p class="info-description">采用最新的移动开发技术和AI技术，为用户提供智能化、个性化的应用体验。</p>
                 </div>
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <img src="images/icons/icon-social.png" alt="社交媒体">
-                    </div>
-                    <h3>社交媒体</h3>
-                    <div class="social-links">
-                        <a href="#" class="social-link">微博</a>
-                        <a href="#" class="social-link">微信公众号</a>
-                        <a href="#" class="social-link">知乎</a>
-                    </div>
+                <div class="info-card">
+                    <div class="info-icon">💡</div>
+                    <h3 class="info-title">用户至上</h3>
+                    <p class="info-description">始终以用户需求为中心，持续优化产品功能，提供优质的客户服务。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="images/app_screenshots/logo-white.jpg" alt="I, President Logo">
-                    <p>模拟总统决策，掌控你的虚拟国度</p>
+                <div class="footer-section">
+                    <h3>杭州星合新能源有限公司</h3>
+                    <p>游戏化改变你的生活方式</p>
                 </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>产品</h4>
-                        <ul>
-                            <li><a href="#features">功能特色</a></li>
-                            <li><a href="#ministers">智慧大臣</a></li>
-                            <li><a href="#subscription">订阅计划</a></li>
-                            <li><a href="#faq">常见问题</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>公司</h4>
-                        <ul>
-                            <li><a href="#">关于我们</a></li>
-                            <li><a href="privacy.html">隐私政策</a></li>
-                            <li><a href="#">使用条款</a></li>
-                            <li><a href="#">退款政策</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>支持</h4>
-                        <ul>
-                            <li><a href="#contact">联系我们</a></li>
-                            <li><a href="#">帮助中心</a></li>
-                            <li><a href="#">常见问题</a></li>
-                            <li><a href="#">反馈建议</a></li>
-                        </ul>
-                    </div>
+                <div class="footer-section">
+                    <h4>产品中心</h4>
+                    <ul>
+                        <li><a href="i-president.html">I, President</a></li>
+                        <li><a href="meet.html">Meet</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>公司信息</h4>
+                    <ul>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="contact.html">联系我们</a></li>
+                        <li><a href="privacy.html">隐私政策</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>邮箱：contact@5xinghe.xyz</li>
+                        <li>网站：5xinghe.xyz</li>
+                        <li>地址：杭州市</li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 I, President. 保留所有权利。</p>
+                <p>&copy; 2024 杭州星合新能源有限公司. 保留所有权利. | <span id="icp-number">ICP备案号：待备案</span></p>
             </div>
         </div>
     </footer>
